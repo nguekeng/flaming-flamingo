@@ -7,31 +7,34 @@ import javax.swing.JMenuBar;
 
 @SuppressWarnings("serial")
 public class BaseWindow extends JFrame {
-private Vue vue;
-	
-	public BaseWindow(String title, JMenuBar menuBar){
+	private Vue vue;
+
+	public BaseWindow(String title, JMenuBar menuBar) {
 		super(title);
-		
-		setSize(1200, 700);
+
+		setSize(ConstantesVue.LARGEUR_FENETRE_BASE,
+				ConstantesVue.LARGEUR_FENETRE_BASE);
 		setLocation(
-				(int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() / 2 - 600 ),//600 as constant
-				(int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 2 - (350 )));//350 as constant
+				(int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize()
+						.getWidth() / 2 - ConstantesVue.POSITIONNEMENT_HORIZONTAL_FENETRE_BASE),
+				(int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize()
+						.getHeight() / 2 - (ConstantesVue.POSITIONNEMENT_VERTICAL_FENETRE_BASE)));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
-		setLayout(new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS));
+		setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
 		this.setJMenuBar(menuBar);
-		
+
 	}
-	
-	private void ajouterHeaderEtRecherche(ViewController viewController){
-		add(Box.createVerticalStrut(80));
+
+	private void ajouterHeaderEtRecherche(ViewController viewController) {
+		add(Box.createVerticalStrut(ConstantesVue.MARGIN_TOP_PANEL_HEADER));
 		add(new Header(viewController));
-		add(Box.createVerticalStrut(20));
+		add(Box.createVerticalStrut(ConstantesVue.MARGIN_TOP_PANEL_RECHERCHE));
 		add(new Search(viewController));
-		add(Box.createVerticalStrut(20));
+		add(Box.createVerticalStrut(ConstantesVue.MARGIN_BOTTOM_PANEL_RECHERCHE));
 	}
-	
-	public void changeVuePrincipale(Vue vue, ViewController viewController){
+
+	public void changeVuePrincipale(Vue vue, ViewController viewController) {
 		this.vue = vue;
 		getContentPane().removeAll();
 		ajouterHeaderEtRecherche(viewController);
