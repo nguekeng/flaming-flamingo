@@ -4,6 +4,7 @@ import java.awt.Dimension;
 
 import javax.swing.BorderFactory;
 
+@SuppressWarnings("serial")
 public class ListeClients extends Vue{
 	public ListeClients(ViewController viewController) {
 		super(viewController);

@@ -13,7 +13,7 @@ public class BaseWindow extends JFrame {
 		super(title);
 
 		setSize(ConstantesVue.LARGEUR_FENETRE_BASE,
-				ConstantesVue.LARGEUR_FENETRE_BASE);
+				ConstantesVue.HAUTEUR_FENETRE_BASE);
 		setLocation(
 				(int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize()
 						.getWidth() / 2 - ConstantesVue.POSITIONNEMENT_HORIZONTAL_FENETRE_BASE),
