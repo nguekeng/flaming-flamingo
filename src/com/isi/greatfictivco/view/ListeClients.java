@@ -33,7 +33,9 @@ public class ListeClients extends Vue {
 
 		String title[] = { "Pseudo", "Age", "Taille" };
 
-		JTable tableau = new JTable(data, title);
+		ModeleTableau modeleTab = new ModeleTableau(data, title);
+		
+		JTable tableau = new JTable(modeleTab);
 		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
 		

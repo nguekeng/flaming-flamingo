@@ -11,6 +11,6 @@ public class ViewController {
 		this.otherController = otherController;
 		menu = new Menu("telephone");// TODO remove hard coding of role
 		baseWindow = new BaseWindow(title, menu.getMenuBar());
-		baseWindow.changeVuePrincipale(new ListeProduits(this), this);
+		baseWindow.changeVuePrincipale(new ListeClients(this), this);
 	}
 }
