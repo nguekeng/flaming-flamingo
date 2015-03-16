@@ -1,6 +1,7 @@
 package com.isi.greatfictivco.view;
 
 import java.awt.Color;
+import java.awt.Font;
 
 public class ConstantesVue {
 	//FENETRE DE BASE
@@ -40,5 +41,10 @@ public class ConstantesVue {
 
 	public static final Color COULEUR_BORDURE = Color.black;
 	public static final int LARGEUR_BORDURE = 1;
+	
+	//TABLEAU
+	public static final String FONT_TITRE_TABLEAU = "Arial";
+	public static final int FONT_STYLE_TITRE_TABLEAU = Font.BOLD;
+	public static final int FONT_SIZE_TITRE_TABLEAU = 14;
 
 }

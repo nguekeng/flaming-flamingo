@@ -15,9 +15,11 @@ import javax.swing.border.TitledBorder;
 @SuppressWarnings("serial")
 public class ListeClients extends Vue {
 	private JPanel panelTableau;
+	private String titreTableau = "Liste des clients";
 	
 	public ListeClients(ViewController viewController) {
 		super(viewController);
+		
 		
 		addSearch(viewController);
 		creerStructureTabClients();
@@ -52,14 +54,14 @@ public class ListeClients extends Vue {
 	
 	private void creerStructureTabClients(){
 		panelTableau = new JPanel();
-		panelTableau.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE),"Liste de clients", TitledBorder.TOP, TitledBorder.LEFT));
+		panelTableau.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE),titreTableau, TitledBorder.TOP, TitledBorder.LEFT, new Font(ConstantesVue.FONT_TITRE_TABLEAU,ConstantesVue.FONT_STYLE_TITRE_TABLEAU,ConstantesVue.FONT_SIZE_TITRE_TABLEAU)));
+	
 		panelTableau.setLayout(new GridLayout());
 		panelTableau.setPreferredSize(new Dimension(
 				ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS));
 		panelTableau.setMaximumSize(getPreferredSize());
-		//panelTableau.setBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE,
-				//ConstantesVue.LARGEUR_BORDURE));
+		
 	}
 	
 	
