@@ -17,7 +17,7 @@ PRIMARY KEY (`id`),
 `qte_critique` int(10) NOT NULL,
 `fournisseur` int(10) NOT NULL,
 `si_enleve` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `commande_produit` (
 PRIMARY KEY (`id`),
@@ -26,16 +26,16 @@ PRIMARY KEY (`id`),
 `id_produit` int(10) NOT NULL,
 `qte` int(10) NOT NULL,
 `prix_par_unite` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `commande` (
 PRIMARY KEY (`id`),
 `id` int(10) NOT NULL auto_increment,
-`id_client` int(10) NOT NULL,   
+`id_client` int(10) NOT NULL,
 `vendeur` int(10) NOT NULL,    #pourquoi un vendeur ici ???
 `date` date NOT NULL,
 `prix_total` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `clients` (
 PRIMARY KEY (`id`),
@@ -44,7 +44,7 @@ PRIMARY KEY (`id`),
 `adresse` varchar(100) NOT NULL,
 `telephone` varchar(20) NOT NULL,
 `description` varchar(250)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `inventaire` (
 PRIMARY KEY (`id`),
@@ -52,7 +52,7 @@ PRIMARY KEY (`id`),
 `id_produit` int(10) NOT NULL,
 `id_entrepot` int(10) NOT NULL,
 `qte` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `utilisateur` (
 PRIMARY KEY (`id`),
@@ -60,43 +60,43 @@ PRIMARY KEY (`id`),
 `nom_utilisateur` varchar(250) NOT NULL,
 `mot_de_passe` varchar(50) NOT NULL,
 `id_role` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `system` (
 `nom` varchar(250) NOT NULL,
 `adresse` varchar(250) NOT NULL,
 `logo` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `entrepots` (
 PRIMARY KEY (`id`),
 `id` int(10) NOT NULL auto_increment,
 `nom` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `fournisseur` (
 PRIMARY KEY (`id`),
 `id` int(10) NOT NULL auto_increment,
 `nom` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `categorie` (
 PRIMARY KEY (`id`),
 `id` int(10) NOT NULL auto_increment,
 `nom` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `type_unite` (
 PRIMARY KEY (`id`),
 `id` int(10) NOT NULL auto_increment,
 `nom` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 CREATE TABLE IF NOT EXISTS `role` (
 PRIMARY KEY (`id`),
 `id` int(10) NOT NULL auto_increment,
 `nom` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=10;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE =UTF8_bin auto_increment=1;
 
 alter table `produits` add constraint prod_1 foreign key (`categorie_id`) references produits (`id`),
 add constraint prod_2 foreign key (`type_unite`) references produits (`id`),
