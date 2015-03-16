@@ -11,20 +11,13 @@ import javax.swing.JTable;
 
 @SuppressWarnings("serial")
 public class ListeClients extends Vue {
-	private JPanel listeClients;
+	private JPanel panelTableau;
 	
 	public ListeClients(ViewController viewController) {
 		super(viewController);
 		
 		addSearch(viewController);
-		listeClients = new JPanel();
-		listeClients.setLayout(new GridLayout());
-		listeClients.setPreferredSize(new Dimension(
-				ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
-				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS));
-		listeClients.setMaximumSize(getPreferredSize());
-		listeClients.setBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE,
-				ConstantesVue.LARGEUR_BORDURE));
+		creerStructureTabClients();
 		
 		Object[][] data = {
 
@@ -38,16 +31,26 @@ public class ListeClients extends Vue {
 
 		};
 
-		
 		String title[] = { "Pseudo", "Age", "Taille" };
 
 		JTable tableau = new JTable(data, title);
 		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
 		
-		listeClients.add(new JScrollPane(tableau));
-		add(listeClients);
+		panelTableau.add(new JScrollPane(tableau));
+		add(panelTableau);
 
+	}
+	
+	private void creerStructureTabClients(){
+		panelTableau = new JPanel();
+		panelTableau.setLayout(new GridLayout());
+		panelTableau.setPreferredSize(new Dimension(
+				ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
+				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS));
+		panelTableau.setMaximumSize(getPreferredSize());
+		panelTableau.setBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE,
+				ConstantesVue.LARGEUR_BORDURE));
 	}
 	
 	
