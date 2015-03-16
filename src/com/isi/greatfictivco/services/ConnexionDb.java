@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ConnexionDb {
-
+	//TODO a method that reads these options from a file
 	static String db = "tp";
 	static String pwd = "123456";
 	static String user = "root";
@@ -35,7 +35,7 @@ public class ConnexionDb {
 			connect.close();
 
 		} catch (SQLException e) {
-			System.out.println("La connection a la bd n'a pas été fermer");
+			System.out.println("La connection a la bd n'a pas Ã©tÃ© fermer");
 		}
 	}
 
@@ -46,7 +46,7 @@ public class ConnexionDb {
 		try {
 			ps = connect.prepareStatement(query);
 		} catch (SQLException e) {
-			System.out.println("La déclaration n'a pu etre initialiser");
+			System.out.println("La dÃ©claration n'a pu etre initialiser");
 		}
 		return ps;
 	}
