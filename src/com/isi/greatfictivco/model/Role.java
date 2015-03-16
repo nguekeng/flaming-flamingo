@@ -2,25 +2,25 @@ package com.isi.greatfictivco.model;
 
 public class Role {
 	//Attributs
-	private int idRole;
-	private String nomRole;
+	private int id_role;
+	private String nom_role;
 	
 	
 	//Accesseurs et mutateurs
-	public int getIdRole() {
-		return idRole;
+	public int getId_role() {
+		return id_role;
 	}
 	
-	public void setIdRole(int idRole) {
-		this.idRole = idRole;
+	public void setId_role(int id_role) {
+		this.id_role = id_role;
 	}
 	
-	public String getNomRole() {
-		return nomRole;
+	public String getNom_role() {
+		return nom_role;
 	}
 	
-	public void setNomRole(String nomRole) {
-		this.nomRole = nomRole;
+	public void setNom_role(String nom_role) {
+		this.nom_role = nom_role;
 	}
 	
 }

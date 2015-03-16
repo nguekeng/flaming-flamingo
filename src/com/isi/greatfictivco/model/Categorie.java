@@ -2,25 +2,25 @@ package com.isi.greatfictivco.model;
 
 public class Categorie {
 	//Attributs
-	private int idCategorie;
-	private String nomCategorie;
+	private int id_categorie;
+	private String nom_categorie;
 	
 	
 	//Accesseurs et mutateurs
-	public int getIdCategorie() {
-		return idCategorie;
+	public int getId_categorie() {
+		return id_categorie;
 	}
 	
-	public void setIdCategorie(int idCategorie) {
-		this.idCategorie = idCategorie;
+	public void setId_categorie(int id_categorie) {
+		this.id_categorie = id_categorie;
 	}
 	
-	public String getNomCategorie() {
-		return nomCategorie;
+	public String getNom_categorie() {
+		return nom_categorie;
 	}
 	
-	public void setNomCategorie(String nomCategorie) {
-		this.nomCategorie = nomCategorie;
+	public void setNom_categorie(String nom_categorie) {
+		this.nom_categorie = nom_categorie;
 	}
 	
 }

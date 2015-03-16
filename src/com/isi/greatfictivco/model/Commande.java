@@ -5,44 +5,53 @@ import java.util.List;
 
 public class Commande {
 	//Attributs
-	private int idCommande;
-	private int idClient;
-	private Date dateCommande;
-	private double prixTotal;
+	private int id_commande;
+	private int id_client;
+	private String vendeur;
+	private Date date;
+	private double prix_total;
 	private List<Produit> listeProduit;
 	
 	
 	//Accesseurs et mutateurs
-	public int getIdCommande() {
-		return idCommande;
+	public int getId_commande() {
+		return id_commande;
 	}
 	
-	public void setIdCommande(int idCommande) {
-		this.idCommande = idCommande;
+	public void setId_commande(int id_commande) {
+		this.id_commande = id_commande;
 	}
 	
-	public int getIdClient() {
-		return idClient;
+	public int getId_client() {
+		return id_client;
 	}
 	
-	public void setIdClient(int idClient) {
-		this.idClient = idClient;
+	public void setId_client(int id_client) {
+		this.id_client = id_client;
 	}
 	
-	public Date getDateCommande() {
-		return dateCommande;
+	public String getVendeur() {
+		return vendeur;
 	}
 	
-	public void setDateCommande(Date dateCommande) {
-		this.dateCommande = dateCommande;
+	public void setVendeur(String vendeur) {
+		this.vendeur = vendeur;
 	}
 	
-	public double getPrixTotal() {
-		return prixTotal;
+	public Date getDate() {
+		return date;
 	}
 	
-	public void setPrixTotal(double prixTotal) {
-		this.prixTotal = prixTotal;
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+	public double getPrix_total() {
+		return prix_total;
+	}
+	
+	public void setPrix_total(double prix_total) {
+		this.prix_total = prix_total;
 	}
 	
 	public List<Produit> getListeProduit() {

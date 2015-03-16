@@ -4,36 +4,30 @@ import java.util.List;
 
 public class Client {
 	//Attributs
-	private int idClient;
-	private String nomEntreprise;
+	private int id_client;
+	private String entreprise;
 	private String adresse;
-	private String nomContact;
-	private String telephoneContact;
+	private String contact;
+	private String telephone;
 	private String description;
 	private List<Commande> listeCommande;
 	
 	
-	//Methode pour ajouter une commande
-	public void ajouterCommande(){
-		
-	}
-	
-	
 	//Accesseurs et mutateurs
-	public int getIdClient() {
-		return idClient;
+	public int getId_client() {
+		return id_client;
 	}
 	
-	public void setIdClient(int idClient) {
-		this.idClient = idClient;
+	public void setId_client(int id_client) {
+		this.id_client = id_client;
 	}
 	
-	public String getNomEntreprise() {
-		return nomEntreprise;
+	public String getEntreprise() {
+		return entreprise;
 	}
 	
-	public void setNomEntreprise(String nomEntreprise) {
-		this.nomEntreprise = nomEntreprise;
+	public void setEntreprise(String entreprise) {
+		this.entreprise = entreprise;
 	}
 	
 	public String getAdresse() {
@@ -44,20 +38,20 @@ public class Client {
 		this.adresse = adresse;
 	}
 	
-	public String getNomContact() {
-		return nomContact;
+	public String getContact() {
+		return contact;
 	}
 	
-	public void setNomContact(String nomContact) {
-		this.nomContact = nomContact;
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 	
-	public String getTelephoneContact() {
-		return telephoneContact;
+	public String getTelephone() {
+		return telephone;
 	}
 	
-	public void setTelephoneContact(String telephoneContact) {
-		this.telephoneContact = telephoneContact;
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
 	
 	public String getDescription() {
@@ -75,5 +69,5 @@ public class Client {
 	public void setListeCommande(List<Commande> listeCommande) {
 		this.listeCommande = listeCommande;
 	}
-
+	
 }

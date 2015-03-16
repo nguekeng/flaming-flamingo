@@ -4,116 +4,117 @@ import java.util.List;
 
 public class Produit {
 	//Attributs
-	private int idProduit;
-	private String UPC;
-	private String nomProduit;
-	private String descriptionProduit;
-	private double prixVendant;
-	private double prixCoutant;
-	private int quantiteParEmballage;
-	private boolean estRetire;
-	private int idCategorie;
-	private int idTypeUnite;
-	private int idFournisseur;
-	private int quantiteTotal;
+	private int id_produit;
+	private String upc;
+	private String nom;
+	private String image;
+	private String description;
+	private double prix_vendant;
+	private double prix_coutant;
+	private int qte_par_paquet;
+	private boolean si_enleve;
+	private int id_categorie;
+	private int id_type_unite;
+	private int id_fournisseur;
+	private int qte_critique;
 	private List<Entrepot> listeEntrepot;
 	
 	
 	//Accesseurs et mutateurs
-	public int getIdProduit() {
-		return idProduit;
+	public int getId_produit() {
+		return id_produit;
 	}
 	
-	public void setIdProduit(int idProduit) {
-		this.idProduit = idProduit;
+	public void setId_produit(int id_produit) {
+		this.id_produit = id_produit;
 	}
 	
-	public String getUPC() {
-		return UPC;
+	public String getUpc() {
+		return upc;
 	}
 	
-	public void setUPC(String uPC) {
-		UPC = uPC;
+	public void setUpc(String upc) {
+		this.upc = upc;
 	}
 	
-	public String getNomProduit() {
-		return nomProduit;
+	public String getNom() {
+		return nom;
 	}
 	
-	public void setNomProduit(String nomProduit) {
-		this.nomProduit = nomProduit;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	
-	public String getDescriptionProduit() {
-		return descriptionProduit;
+	public String getImage() {
+		return image;
 	}
 	
-	public void setDescriptionProduit(String descriptionProduit) {
-		this.descriptionProduit = descriptionProduit;
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
-	public double getPrixVendant() {
-		return prixVendant;
+	public String getDescription() {
+		return description;
 	}
 	
-	public void setPrixVendant(double prixVendant) {
-		this.prixVendant = prixVendant;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
-	public double getPrixCoutant() {
-		return prixCoutant;
+	public double getPrix_vendant() {
+		return prix_vendant;
 	}
 	
-	public void setPrixCoutant(double prixCoutant) {
-		this.prixCoutant = prixCoutant;
+	public void setPrix_vendant(double prix_vendant) {
+		this.prix_vendant = prix_vendant;
 	}
 	
-	public int getQuantiteParEmballage() {
-		return quantiteParEmballage;
+	public double getPrix_coutant() {
+		return prix_coutant;
 	}
 	
-	public void setQuantiteParEmballage(int quantiteParEmballage) {
-		this.quantiteParEmballage = quantiteParEmballage;
+	public void setPrix_coutant(double prix_coutant) {
+		this.prix_coutant = prix_coutant;
 	}
 	
-	public boolean isEstRetire() {
-		return estRetire;
+	public int getQte_par_paquet() {
+		return qte_par_paquet;
 	}
 	
-	public void setEstRetire(boolean estRetire) {
-		this.estRetire = estRetire;
+	public void setQte_par_paquet(int qte_par_paquet) {
+		this.qte_par_paquet = qte_par_paquet;
 	}
 	
-	public int getIdCategorie() {
-		return idCategorie;
+	public boolean isSi_enleve() {
+		return si_enleve;
 	}
 	
-	public void setIdCategorie(int idCategorie) {
-		this.idCategorie = idCategorie;
+	public void setSi_enleve(boolean si_enleve) {
+		this.si_enleve = si_enleve;
 	}
 	
-	public int getIdTypeUnite() {
-		return idTypeUnite;
+	public int getId_categorie() {
+		return id_categorie;
 	}
 	
-	public void setIdTypeUnite(int idTypeUnite) {
-		this.idTypeUnite = idTypeUnite;
+	public void setId_categorie(int id_categorie) {
+		this.id_categorie = id_categorie;
 	}
 	
-	public int getIdFournisseur() {
-		return idFournisseur;
+	public int getId_type_unite() {
+		return id_type_unite;
 	}
 	
-	public void setIdFournisseur(int idFournisseur) {
-		this.idFournisseur = idFournisseur;
+	public void setId_type_unite(int id_type_unite) {
+		this.id_type_unite = id_type_unite;
 	}
 	
-	public int getQuantiteTotal() {
-		return quantiteTotal;
+	public int getId_fournisseur() {
+		return id_fournisseur;
 	}
 	
-	public void setQuantiteTotal(int quantiteTotal) {
-		this.quantiteTotal = quantiteTotal;
+	public void setId_fournisseur(int id_fournisseur) {
+		this.id_fournisseur = id_fournisseur;
 	}
 	
 	public List<Entrepot> getListeEntrepot() {
@@ -122,6 +123,14 @@ public class Produit {
 	
 	public void setListeEntrepot(List<Entrepot> listeEntrepot) {
 		this.listeEntrepot = listeEntrepot;
+	}
+
+	public int getQte_critique() {
+		return qte_critique;
+	}
+
+	public void setQte_critique(int qte_critique) {
+		this.qte_critique = qte_critique;
 	}
 	
 }

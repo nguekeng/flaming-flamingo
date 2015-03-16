@@ -2,25 +2,25 @@ package com.isi.greatfictivco.model;
 
 public class Fournisseur {
 	//Attributs
-	private int idFournisseur;
-	private String nomFournisseur;
+	private int id_fournisseur;
+	private String nom_fournisseur;
 	
 	
 	//Accesseurs et mutateurs
-	public int getIdFournisseur() {
-		return idFournisseur;
+	public int getId_fournisseur() {
+		return id_fournisseur;
 	}
 	
-	public void setIdFournisseur(int idFournisseur) {
-		this.idFournisseur = idFournisseur;
+	public void setId_fournisseur(int id_fournisseur) {
+		this.id_fournisseur = id_fournisseur;
 	}
 	
-	public String getNomFournisseur() {
-		return nomFournisseur;
+	public String getNom_fournisseur() {
+		return nom_fournisseur;
 	}
 	
-	public void setNomFournisseur(String nomFournisseur) {
-		this.nomFournisseur = nomFournisseur;
+	public void setNom_fournisseur(String nom_fournisseur) {
+		this.nom_fournisseur = nom_fournisseur;
 	}
 
 }

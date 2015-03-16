@@ -2,34 +2,43 @@ package com.isi.greatfictivco.model;
 
 public class Utilisateur {
 	//Attributs
-	private int idUtilisateur;
-	private String nomUtilisateur;
-	private Role roleUtilisateur;
+	private int id_utilisateur;
+	private String nom_utilisateur;
+	private String mot_de_passe;
+	private int id_role;
 	
 	
 	//Accesseurs et mutateurs
-	public int getIdUtilisateur() {
-		return idUtilisateur;
+	public int getId_utilisateur() {
+		return id_utilisateur;
 	}
 	
-	public void setIdUtilisateur(int idUtilisateur) {
-		this.idUtilisateur = idUtilisateur;
+	public void setId_utilisateur(int id_utilisateur) {
+		this.id_utilisateur = id_utilisateur;
 	}
 	
-	public String getNomUtilisateur() {
-		return nomUtilisateur;
+	public String getNom_utilisateur() {
+		return nom_utilisateur;
 	}
 	
-	public void setNomUtilisateur(String nomUtilisateur) {
-		this.nomUtilisateur = nomUtilisateur;
+	public void setNom_utilisateur(String nom_utilisateur) {
+		this.nom_utilisateur = nom_utilisateur;
 	}
 	
-	public Role getRoleUtilisateur() {
-		return roleUtilisateur;
+	public String getMot_de_passe() {
+		return mot_de_passe;
 	}
 	
-	public void setRoleUtilisateur(Role roleUtilisateur) {
-		this.roleUtilisateur = roleUtilisateur;
+	public void setMot_de_passe(String mot_de_passe) {
+		this.mot_de_passe = mot_de_passe;
 	}
-
+	
+	public int getId_role() {
+		return id_role;
+	}
+	
+	public void setId_role(int id_role) {
+		this.id_role = id_role;
+	}
+	
 }
