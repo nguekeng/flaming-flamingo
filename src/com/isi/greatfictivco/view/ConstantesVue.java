@@ -16,7 +16,7 @@ public class ConstantesVue {
 	
 	//VUE PRINCIPALE
 	public static final int LARGEUR_PANEL_PRINCIPAL = 1100;
-	public static final int HAUTEUR_PANEL_PRINCIPAL = 400;
+	public static final int HAUTEUR_PANEL_PRINCIPAL = 600;
 	
 	// PANEL RECHERCHE
 	public static final int CHAMPS_RECHERCHE_DECALAGE_HORIZONTAL = 10;
@@ -32,7 +32,7 @@ public class ConstantesVue {
 
 	// PANEL LISTE CLIENTS
 	public static final int LARGEUR_PANEL_LISTE_CLIENTS = 1100;
-	public static final int HAUTEUR_PANEL_LISTE_CLIENTS = 370;
+	public static final int HAUTEUR_PANEL_LISTE_CLIENTS = 470;
 
 	// MENU BAR
 	public static final int LARGEUR_MENUBAR = 1200;
