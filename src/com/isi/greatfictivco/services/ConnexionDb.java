@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class ConnexionDb {
 
 	static String db = "tp";
-	static String pwd = "123456";
+	static String pwd = "";
 	static String user = "root";
 	static String url = "jdbc:mysql://localhost:3306/";
 	static Connection connect;
