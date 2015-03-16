@@ -1,5 +1,6 @@
 package com.isi.greatfictivco.view;
 
+import javax.swing.JButton;
 import javax.swing.table.AbstractTableModel;
 
 public class ModeleTableau extends AbstractTableModel{
@@ -40,7 +41,10 @@ public class ModeleTableau extends AbstractTableModel{
 	}
 	
 	public boolean isCellEditable(int row, int col){//return true si on veut que les cellules soient éditables
-		return false;
+		if(getValueAt(0, col) instanceof JButton){//IDEE: éditer les infos directement dans le tableau??
+			return false;
+		}
+		return true;
 	}
 
 }
