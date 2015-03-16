@@ -17,6 +17,7 @@ public class EditerJButton extends DefaultCellEditor {
 	public EditerJButton(JCheckBox checkBox) {
 		super(checkBox);
 		bouton = new JButton();
+		bouton.setText("modifier");
 		bouton.addActionListener(ecouteurBoutonTableau);
 	}
 
@@ -27,6 +28,8 @@ public class EditerJButton extends DefaultCellEditor {
 		ecouteurBoutonTableau.setRow(row);
 		ecouteurBoutonTableau.setColumn(column);
 		ecouteurBoutonTableau.setTable(table);
+		bouton.setActionCommand(value.toString());
+		bouton.setText("modifier");
 		return bouton;
 	}
 
@@ -51,7 +54,7 @@ class EcouteurBoutonTableau implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println(((JButton)e.getSource()).getText());
+		System.out.println(((JButton)e.getSource()).getActionCommand());
 
 	}
 

@@ -31,16 +31,17 @@ public class ListeClients extends Vue {
 
 		Object[][] data = {// TODO remove hardcoding
 
-		{ "Cysboy", "28 ans", "1.80 m", "modifier" },
+		{ "Cysboy", "28 ans", "1.80 m", "id1" },
 
-		{ "BZHHydde", "28 ans", "1.80 m", "modifier" },
+		{ "BZHHydde", "28 ans", "1.80 m", "id2" },
 
-		{ "IamBow", "24 ans", "1.90 m", "modifier" },
+		{ "IamBow", "24 ans", "1.90 m", "id3" },
 
-		{ "FunMan", "32 ans", "1.85 m", "modifier" }
+		{ "FunMan", "32 ans", "1.85 m", "id4" }
 
 		};
 
+		
 		String title[] = { "Pseudo", "Age", "Taille", "Action" };// TODO remove
 																	// hardcoding
 

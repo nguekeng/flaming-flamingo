@@ -11,8 +11,8 @@ public class AfficherJButton extends JButton implements TableCellRenderer{
 	@Override
 	public Component getTableCellRendererComponent(JTable table, Object value,
 			boolean isSelected, boolean isFocus, int row, int col) {
-		setText((value!=null)? value.toString(): "");
+		setText("modifier");
 		return this;
 	}
-
+	
 }
