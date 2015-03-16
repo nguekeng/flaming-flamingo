@@ -1,36 +1,29 @@
 package com.isi.greatfictivco.view;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.event.AdjustmentEvent;
-import java.awt.event.AdjustmentListener;
 
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
+import javax.swing.Box;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 @SuppressWarnings("serial")
 public class ListeClients extends Vue {
-	private JPanel titresColonnes;
-	private JPanel liste;
-
+	private JPanel listeClients;
+	
 	public ListeClients(ViewController viewController) {
 		super(viewController);
-
-		setLayout(new GridLayout());
-		setPreferredSize(new Dimension(
+		
+		addSearch(viewController);
+		listeClients = new JPanel();
+		listeClients.setLayout(new GridLayout());
+		listeClients.setPreferredSize(new Dimension(
 				ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS));
-		setMaximumSize(getPreferredSize());
-		setBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE,
+		listeClients.setMaximumSize(getPreferredSize());
+		listeClients.setBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE,
 				ConstantesVue.LARGEUR_BORDURE));
 		
 		Object[][] data = {
@@ -52,8 +45,11 @@ public class ListeClients extends Vue {
 		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
 		
-		add(new JScrollPane(tableau));
+		listeClients.add(new JScrollPane(tableau));
+		add(listeClients);
 
 	}
+	
+	
 
 }

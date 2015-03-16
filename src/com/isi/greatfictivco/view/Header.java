@@ -18,7 +18,7 @@ private BufferedImage logo;
 		super(viewController);
 		
 		try {
-			logo = ImageIO.read(new File("battleship.png"));
+			logo = ImageIO.read(new File("battleship.png"));//TODO remove hardcoding of logo
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

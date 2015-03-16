@@ -14,6 +14,10 @@ public class ConstantesVue {
 	public static final int MARGIN_TOP_PANEL_RECHERCHE = 20;
 	public static final int MARGIN_BOTTOM_PANEL_RECHERCHE = 20;
 	
+	//VUE PRINCIPALE
+	public static final int LARGEUR_PANEL_PRINCIPAL = 1100;
+	public static final int HAUTEUR_PANEL_PRINCIPAL = 400;
+	
 	// PANEL RECHERCHE
 	public static final int CHAMPS_RECHERCHE_DECALAGE_HORIZONTAL = 10;
 	public static final int CHAMPS_RECHERCHE_DECALAGE_VERTICAL = 20;

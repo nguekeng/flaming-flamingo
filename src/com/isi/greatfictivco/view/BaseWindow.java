@@ -26,18 +26,17 @@ public class BaseWindow extends JFrame {
 
 	}
 
-	private void ajouterHeaderEtRecherche(ViewController viewController) {
+	private void ajouterHeader(ViewController viewController) {
 		add(Box.createVerticalStrut(ConstantesVue.MARGIN_TOP_PANEL_HEADER));
 		add(new Header(viewController));
 		add(Box.createVerticalStrut(ConstantesVue.MARGIN_TOP_PANEL_RECHERCHE));
-		add(new Search(viewController));
-		add(Box.createVerticalStrut(ConstantesVue.MARGIN_BOTTOM_PANEL_RECHERCHE));
+		
 	}
 
 	public void changeVuePrincipale(Vue vue, ViewController viewController) {
 		this.vue = vue;
 		getContentPane().removeAll();
-		ajouterHeaderEtRecherche(viewController);
+		ajouterHeader(viewController);
 		add(vue);
 		validate();
 		repaint();
