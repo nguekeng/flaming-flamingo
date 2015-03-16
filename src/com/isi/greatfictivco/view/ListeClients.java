@@ -16,54 +16,69 @@ import javax.swing.border.TitledBorder;
 public class ListeClients extends Vue {
 	private JPanel panelTableau;
 	private String titreTableau = "Liste des clients";
-	
+	private ModeleTableau modeleTableau;
+	private JTable tableau;
+	private Object[][] data;
+
 	public ListeClients(ViewController viewController) {
 		super(viewController);
-		
-		
+
 		addSearch(viewController);
-		creerStructureTabClients();
-		
-		Object[][] data = {
+		creerStructurePanelTableau();
 
-		{ "Cysboy", "28 ans", "1.80 m", "modifier"  },
+		Object[][] data = {// TODO remove hardcoding
 
-		{ "BZHHydde", "28 ans", "1.80 m", "modifier"},
+		{ "Cysboy", "28 ans", "1.80 m", "modifier" },
 
-		{ "IamBow", "24 ans", "1.90 m","modifier"},
+		{ "BZHHydde", "28 ans", "1.80 m", "modifier" },
 
-		{ "FunMan", "32 ans", "1.85 m" ,"modifier"}
+		{ "IamBow", "24 ans", "1.90 m", "modifier" },
+
+		{ "FunMan", "32 ans", "1.85 m", "modifier" }
 
 		};
 
-		String title[] = { "Pseudo", "Age", "Taille", "Action" };
+		String title[] = { "Pseudo", "Age", "Taille", "Action" };// TODO remove
+																	// hardcoding
 
-		ModeleTableau modeleTab = new ModeleTableau(data, title);
-		
-		JTable tableau = new JTable(modeleTab);
-		//tableau.setDefaultRenderer(JButton.class, new ComposantTableau());//TODO delete si pas utilisé
-		//afficher un JButton en fonction de la colonne
-		tableau.getColumn("Action").setCellRenderer(new AfficherJButton());
-		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
-				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
-		
-		panelTableau.add(new JScrollPane(tableau));
-		add(panelTableau);
+		modeleTableau = new ModeleTableau(data, title);
+		creerTableau();
+		ajouterComposantesDansVue();
 
 	}
-	
-	private void creerStructureTabClients(){
+
+	private void creerStructurePanelTableau() {
 		panelTableau = new JPanel();
-		panelTableau.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(ConstantesVue.COULEUR_BORDURE),titreTableau, TitledBorder.TOP, TitledBorder.LEFT, new Font(ConstantesVue.FONT_TITRE_TABLEAU,ConstantesVue.FONT_STYLE_TITRE_TABLEAU,ConstantesVue.FONT_SIZE_TITRE_TABLEAU)));
-	
+		panelTableau.setBorder(BorderFactory.createTitledBorder(BorderFactory
+				.createLineBorder(ConstantesVue.COULEUR_BORDURE), titreTableau,
+				TitledBorder.TOP, TitledBorder.LEFT, new Font(
+						ConstantesVue.FONT_TITRE_TABLEAU,
+						ConstantesVue.FONT_STYLE_TITRE_TABLEAU,
+						ConstantesVue.FONT_SIZE_TITRE_TABLEAU)));
+
 		panelTableau.setLayout(new GridLayout());
 		panelTableau.setPreferredSize(new Dimension(
 				ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS));
 		panelTableau.setMaximumSize(getPreferredSize());
-		
+
+	}
+
+	private void creerTableau() {
+		tableau = new JTable(modeleTableau);
+
+		// tableau.setDefaultRenderer(JButton.class, new
+		// ComposantTableau());//TODO delete si pas utilisé
+
+		// afficher un JButton en fonction de la colonne
+		tableau.getColumn("Action").setCellRenderer(new AfficherJButton());
+		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
+				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
 	}
 	
-	
+	private void ajouterComposantesDansVue(){
+		panelTableau.add(new JScrollPane(tableau));
+		add(panelTableau);
+	}
 
 }
