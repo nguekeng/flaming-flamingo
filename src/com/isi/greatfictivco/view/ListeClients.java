@@ -3,10 +3,13 @@ package com.isi.greatfictivco.view;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -43,8 +46,7 @@ public class ListeClients extends Vue {
 
 		modeleTableau = new ModeleTableau(data, title);
 		creerTableau();
-		ajouterComposantesDansVue();
-
+		ajouterComposantsDansVue();
 	}
 
 	private void creerStructurePanelTableau() {
@@ -72,13 +74,16 @@ public class ListeClients extends Vue {
 
 		// afficher un JButton en fonction de la colonne
 		tableau.getColumn("Action").setCellRenderer(new AfficherJButton());
+		tableau.getColumn("Action").setCellEditor(new EditerJButton(new JCheckBox()));
 		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
 	}
 	
-	private void ajouterComposantesDansVue(){
+	private void ajouterComposantsDansVue(){
 		panelTableau.add(new JScrollPane(tableau));
 		add(panelTableau);
 	}
 
 }
+
+
