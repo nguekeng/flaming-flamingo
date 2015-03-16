@@ -46,7 +46,7 @@ public class ListeClients extends Vue {
 																	// hardcoding
 
 		modeleTableau = new ModeleTableau(data, title);
-		creerTableau();
+		creerTableau(viewController);
 		ajouterComposantsDansVue();
 	}
 
@@ -67,7 +67,7 @@ public class ListeClients extends Vue {
 
 	}
 
-	private void creerTableau() {
+	private void creerTableau(ViewController viewController) {
 		tableau = new JTable(modeleTableau);
 
 		// tableau.setDefaultRenderer(JButton.class, new
@@ -75,7 +75,7 @@ public class ListeClients extends Vue {
 
 		// afficher un JButton en fonction de la colonne
 		tableau.getColumn("Action").setCellRenderer(new AfficherJButton());
-		tableau.getColumn("Action").setCellEditor(new EditerJButton(new JCheckBox()));
+		tableau.getColumn("Action").setCellEditor(new EditerJButton(new JCheckBox(), "modifier","client", viewController ));
 		tableau.setSize(ConstantesVue.LARGEUR_PANEL_LISTE_CLIENTS,
 				ConstantesVue.HAUTEUR_PANEL_LISTE_CLIENTS);
 	}

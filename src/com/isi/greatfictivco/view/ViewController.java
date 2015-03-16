@@ -13,4 +13,8 @@ public class ViewController {
 		baseWindow = new BaseWindow(title, menu.getMenuBar());
 		baseWindow.changeVuePrincipale(new ListeClients(this), this);
 	}
+	
+	public void afficherModificationClient(){//TODO envoyer a la page de modif du client avec l'id en paramètre
+		baseWindow.changeVuePrincipale(new ListeProduits(this), this);
+	}
 }
