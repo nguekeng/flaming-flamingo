@@ -9,7 +9,7 @@ public class ConstantesVue {
 	public static final int HAUTEUR_FENETRE_BASE = 700;
 	
 	public static final int POSITIONNEMENT_HORIZONTAL_FENETRE_BASE = 600;
-	public static final int POSITIONNEMENT_VERTICAL_FENETRE_BASE = 380;
+	public static final int POSITIONNEMENT_VERTICAL_FENETRE_BASE = 370;
 	
 	public static final int MARGIN_TOP_PANEL_HEADER = 80;
 	public static final int MARGIN_TOP_PANEL_RECHERCHE = 20;
